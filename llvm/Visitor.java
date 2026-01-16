@@ -311,7 +311,7 @@ public class Visitor extends IRBuilder {
                     if (isGlobal()) {
                         globalVar = makeGlobalVar(ident.getValue(), arrayType, constantArray, false);
                     } else {
-                        globalVar = makeGlobalVar(arrayType, new ConstantArray(arrayType), false);
+                        globalVar = makeGlobalVar(arrayType, constantArray, false);
                     }
                     curSymTable.addSymbol(ident.getValue(), globalVar);
                 }
